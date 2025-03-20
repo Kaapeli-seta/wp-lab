@@ -17,7 +17,8 @@ get_header();
             endif;
             ?>
         </div>
-        <img src="<?php echo get_template_directory_uri(); ?>/map.svg" alt="Hero">
+        <?php the_custom_header_markup();?>
+
     </section>
     <main>
         <section class="products">

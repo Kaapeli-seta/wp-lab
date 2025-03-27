@@ -15,12 +15,6 @@
             <?php the_custom_logo();?>
         </div>
         <div class="header-top-right">
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">About us</a></li>
-                </ul>
-            </nav>
+        <?php wp_nav_menu(["theme_location" => "main-menu", "container" => "nav"]); ?>
         </div>
     </header>

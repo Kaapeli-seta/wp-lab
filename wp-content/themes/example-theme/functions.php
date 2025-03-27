@@ -1,4 +1,5 @@
 <?php
+require_once(__DIR__ . '/inc/article-function.php');
 function register_my_menu(): void {
 register_nav_menu( 'main-menu', __( 'Main Menu' ) );
 }

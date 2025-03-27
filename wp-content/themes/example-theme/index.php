@@ -18,29 +18,15 @@ get_header();
             ?>
         </div>
         <?php the_custom_header_markup();?>
-
     </section>
     <main>
         <section class="products">
             <h2>Featured Products</h2>
-            <article class="product">
-                <img src="//place-hold.it/200x200?text=Product" alt="Product">
-                <h3>Product 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.</p>
-                <a href="#">Read More</a>
-            </article>
-            <article class="product">
-                <img src="//place-hold.it/200x200?text=Product" alt="Product">
-                <h3>Product 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.</p>
-                <a href="#">Read More</a>
-            </article>
-            <article class="product">
-                <img src="//place-hold.it/200x200?text=Product" alt="Product">
-                <h3>Product 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quos.</p>
-                <a href="#">Read More</a>
-            </article>
+            <?php
+            $args = ['tag' => 'featured'];
+            $products = new WP_Query( $args );
+            generate_article($products);
+            ?>
         </section>
     </main>
 <?php

@@ -20,5 +20,4 @@ global $wp_query;
         </section>
     </main>
 <?php
-get_sidebar();
 get_footer();

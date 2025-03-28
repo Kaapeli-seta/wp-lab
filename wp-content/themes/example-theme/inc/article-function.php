@@ -8,7 +8,7 @@ function generate_article($products): void {
         <article class="product">
                 <?php
                 the_post_thumbnail();
-                the_title('<h3>','<h3>');
+                the_title('<h3>','</h3>');
                 $excerpt = get_the_excerpt();
 
                 ?>

@@ -1,9 +1,6 @@
 <?php
 get_header();
 ?>
-
-
-
     <section class="hero">
         <div class="hero-text">
             <?php

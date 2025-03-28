@@ -33,3 +33,11 @@ function search_filter($query) {
     return $query;
 }
 add_filter('pre_get_posts','search_filter');
+
+function my_breadcrumb_title_swapper( $title,  $type ) {
+    if ( in_array( 'home', $type ) ) {
+        $title = __( 'Home' );
+    }
+    return $title;
+}
+add_filter( 'bcn_breadcrumb_title', 'my_breadcrumb_title_swapper', 3, 10 );

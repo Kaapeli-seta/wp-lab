@@ -25,3 +25,11 @@ function theme_setup(): void {
 }
 
 add_action( 'after_setup_theme', 'theme_setup' );
+
+function search_filter($query) {
+    if ($query->is_search) {
+        $query->set('category_name', 'products');
+    }
+    return $query;
+}
+add_filter('pre_get_posts','search_filter');

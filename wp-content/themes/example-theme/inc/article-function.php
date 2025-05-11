@@ -17,6 +17,7 @@ function generate_article($products): void {
                 </p>
 
                 <a href="<?php echo get_permalink(); ?>">Read More</a>
+                <a href="#" class="open-modal" data-id="<?php echo get_the_ID()?>">open modal</a>
             </article>
     <?php
     endwhile;
